@@ -1,0 +1,94 @@
+            body {
+                position: relative;
+                background-image: url(pastel-tone-purple-pink-blue-gradient-defocused-abstract-photo-smooth-lines-pantone-color-background_49683-4059.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            .header {
+                background-color: rgb(224, 179, 245);
+                text-align: center;
+                height: 150px;
+                margin-top: 0px;
+                border-radius: 20px;
+            }
+            
+            h1 {
+                margin: 0px;
+                padding: 40px;
+            }
+            
+            .nav {
+                text-align: left;
+                height: min-content;
+                background-color: rgb(255, 255, 255);
+                padding: 10px;
+                font-family: cursive;
+                border-radius: 10px;
+            }
+            
+            a {
+                border-radius: 10px;
+                padding: 5px;
+                text-decoration: black;
+            }
+            
+            a:hover {
+                color: rgb(224, 164, 236);
+            }
+            
+            table {
+                padding: 10px;
+                align-items: center;
+                background-color: rgb(224, 179, 245);
+                margin-top: 20px;
+                border-radius: 10px;
+            }
+            
+            input {
+                border-radius: 5px;
+            }
+            
+            .summary {
+                background-color: rgb(224, 179, 245);
+                border-radius: 10px;
+                text-align: left;
+                font-family: cursive;
+                text-indent: 50px;
+                width: 360px;
+                padding: auto;
+                position: fixed;
+                top: 200px;
+                left: 450px;
+            }
+            
+            .text {
+                background-color: rgb(224, 179, 245);
+                border-radius: 10px;
+                font-family: cursive;
+                width: 360px;
+                padding: auto;
+                margin-top: 20px;
+            }
+            
+            .image {
+                margin-left: 680px;
+                width: fit-content;
+                border-radius: 10px;
+                position: fixed;
+                top: 260px;
+                left: 200px;
+            }
+            
+            .button {
+                background-color: rgb(122, 43, 129);
+                color: rgb(238, 238, 238);
+                border-radius: 10px;
+                width: 200px;
+                text-align: center;
+                margin-left: 100px;
+                padding-left: 40px;
+                padding-right: 40px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validate1() {
+            var name = document.forms["RegForm"]["firstname"];
+
+            if (name.value == "") {
+
+                document.getElementById("f").innerHTML = "invalid";
+                document.getElementById("f").style.color = "red";
+                return false;
+
+            } else {
+
+                document.getElementById("f").innerHTML = "valid";
+                document.getElementById("f").style.color = "green";
+                return true;
+            }
+        }
+
+        function validate2() {
+            var name = document.forms["RegForm"]["lastName"];
+
+            if (name.value == "") {
+
+                document.getElementById("l").innerHTML = "invalid";
+                document.getElementById("l").style.color = "red";
+                return false;
+
+            } else {
+
+                document.getElementById("l").innerHTML = "valid";
+                document.getElementById("l").style.color = "green";
+                return true;
+            }
+        }
+
+        function validate3() {
+            var pass = document.forms["RegForm"]["password"];
+            var p = document.getElementById("pass").value
+
+            if (p.length < 4) {
+
+                document.getElementById("p").innerHTML = "Too short";
+                document.getElementById("p").style.color = "red";
+                return false;
+
+            } else {
+
+                document.getElementById("p").innerHTML = "good length";
+                document.getElementById("p").style.color = "green";
+                return true;
+            }
+        }
+
+        function checkout() {
+            var fname = document.forms["RegForm"]["firstname"];
+            var lname = document.forms["RegForm"]["lastName"];
+
+            var dob = document.forms["RegForm"]["dob"];
+            document.getElementById("summary").innerHTML = "<h7>YOUR DETAILS!!</h7> </br > ";
+            document.getElementById("summary").innerHTML += "First Name:" + fname.value + "</br>";
+            document.getElementById("summary").innerHTML += "Last Name:" + lname.value + "</br>";
+            document.getElementById("summary").innerHTML += "Date Of Birth:" + dob.value + "</br>";
+            if (document.getElementById("female").checked)
+                document.getElementById("summary").innerHTML += "Gender:Female" + "</br>";
+            if (document.getElementById("male").checked)
+                document.getElementById("summary").innerHTML += "Gender:Male" + "</br>";
+            if (document.getElementById("other").checked)
+                document.getElementById("summary").innerHTML += "Gender:Other" + "</br>";
+            document.getElementById("summary").innerHTML += "<strong>THANK YOU FOR REGISTERING</strong>";
+        }
+    </script>
+</head>
+
+<body style="background-image:;">
+    <div class="header">
+        <h1> My Website
+        </h1>
+        <div class="nav">
+
+            <nav>
+                <a href="Untitled-1.html" style="color: rgb(255, 255, 255); background-color: rgb(130, 45, 151);"> Home
+                    </a>
+                <a href="Untitled-2.html" style="color:rgb(255, 255, 255); background-color: rgb(130, 45, 151); "> About
+                    </a>
+                <a href="Untitled-3.html" style="color: rgb(253, 253, 253); background-color: rgb(130, 45, 151); "> Contact us
+                            </a>
+            </nav>
+        </div>
+    </div>
+    <form action="#" name="RegForm">
+
+
+        <div class="table">
+            <table>
+                <tr>
+                    <td> Enter Firstname
+                    </td>
+                    <td>
+                        <input type="text" name="firstname" minlength=" 2 " onblur="validate1();" required>
+
+                    </td>
+                    <td>
+                        <span id=f>&nbsp;
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Enter Lastname
+                    </td>
+                    <td>
+                        <input type="text" name="lastName" onblur="validate2();" required>
+                    </td>
+                    <td>
+                        <span id="l">&nbsp;
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Enter username
+                    </td>
+                    <td>
+                        <input type="text" name="username" minlength="5" maxlength="10">
+                    </td>
+                </tr>
+                <tr>
+                    <td> Enter Password
+                    </td>
+                    <td>
+                        <input type="password" name="password" id="pass" onblur=" validate3(); ">
+                    </td>
+                    <td>
+                        <span id="p">&nbsp;
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Enter dob
+                    </td>
+                    <td>
+
+                        <input type="date" name="dob" required>
+                    </td>
+                    </td>
+                </tr>
+
+                <tr aria - rowspan="3 ">
+                    <td> Select gender
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" id="female" value="Female "> Female
+                        <br>
+                        <input type="radio" name="gender" id="male" value="Male "> Male
+                        <br>
+                        <input type="radio" name="gender" id="other" value="Other "> Other
+
+
+                    </td>
+                </tr>
+                <tr>
+
+                    <td colspan="2">
+                        <input type="checkbox"> Do you agree the terms and conditions applied
+                    </td>
+                    <tr>
+                    </tr>
+                    <tr>
+
+                        <td aria-colspan="3" id="button">
+                        </td>
+                    </tr>
+            </table>
+            <br>
+            <span class="button" onclick="checkout();">Submit</span>
+
+
+    </form>
+    </div>
+    <div class="summary">
+        <strong>WELCOME</strong>
+        <p id="summary">
+
+        </p>
+
+    </div>
+    <div class="text">
+
+        <p>
+            This Website aims at collecting different details of various user.For sign up you have to enter your firstname,Lastname,username,passwor your dob,your gender.
+
+        </p>
+
+    </div>
+
+    <div class="image ">
+
+        <img src="imgstyle.lnk " style="height: 250px; ">
+
+    </div>
+
+</body>
+
+</html>
